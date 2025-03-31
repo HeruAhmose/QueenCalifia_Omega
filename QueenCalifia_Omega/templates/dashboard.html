@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QueenCalifia-Ω Dashboard</title>
+</head>
+<body>
+  <h1>👑 QueenCalifia-Ω Control Panel</h1>
+  <p>Status: <strong>Online</strong></p>
+  <button onclick="syncLogs()">☁️ Sync Logs to Drive</button>
+
+  <script>
+    function syncLogs() {
+      fetch('/sync').then(res => res.json()).then(data => {
+        alert(data.result);
+      });
+    }
+  </script>
+</body>
+</html>
